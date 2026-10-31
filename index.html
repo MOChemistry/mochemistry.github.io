@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Ledger System — Screenless AI for the Analog Classroom</title>
+<meta name="description" content="The Ledger System evaluates handwritten student assignments. Students write on paper. The box does the rest. Patent pending. Paragon, LLC, Independence, MO.">
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --paper: #faf8f4;
+    --panel: #ffffff;
+    --dark: #0d0d0d;
+    --dark-2: #161616;
+    --brass: #b08d44;
+    --brass-light: #d4b878;
+    --rule: #ddd6c8;
+    --muted: #5a564e;
+    --green: #1f7a4d;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Liberation Sans", "DejaVu Sans", Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+  }
+  h1, h2, h3 { font-family: "Liberation Serif", "DejaVu Serif", Georgia, "Times New Roman", serif; line-height: 1.2; }
+  a { color: #2a5d8f; }
+  img { max-width: 100%; height: auto; display: block; }
+  .wrap { max-width: 1060px; margin: 0 auto; padding: 0 20px; }
+
+  /* Hero */
+  header.hero {
+    background: radial-gradient(ellipse at 50% 30%, var(--dark-2), var(--dark) 70%);
+    color: #f0ead8;
+    text-align: center;
+    padding: 72px 20px 64px;
+    border-bottom: 4px solid var(--brass);
+  }
+  .hero h1 {
+    margin: 0 0 10px;
+    font-size: clamp(34px, 6vw, 58px);
+    letter-spacing: 1px;
+    color: var(--brass-light);
+  }
+  .hero .tagline {
+    font-family: "Liberation Serif", Georgia, serif;
+    font-style: italic;
+    font-size: clamp(19px, 3vw, 26px);
+    margin: 0 0 26px;
+    color: #e8e2d2;
+  }
+  .hero .onesentence {
+    font-size: clamp(18px, 2.6vw, 23px);
+    max-width: 640px;
+    margin: 0 auto 30px;
+    color: #cfc9ba;
+  }
+  .hero .badges { font-size: 14px; letter-spacing: 2px; text-transform: uppercase; color: var(--brass-light); }
+  .hero .badges span { margin: 0 12px; }
+
+  section { padding: 56px 0; }
+  section h2 {
+    font-size: clamp(26px, 4vw, 36px);
+    margin: 0 0 8px;
+    color: var(--ink);
+  }
+  section h2::after {
+    content: "";
+    display: block;
+    width: 64px;
+    height: 3px;
+    background: var(--brass);
+    margin-top: 10px;
+  }
+  .lead { color: var(--muted); max-width: 760px; }
+
+  /* Three ideas */
+  .ideas { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 22px; margin-top: 30px; }
+  .idea {
+    background: var(--panel);
+    border: 1px solid var(--rule);
+    border-top: 4px solid var(--brass);
+    padding: 24px 22px;
+  }
+  .idea h3 { margin: 0 0 10px; font-size: 22px; }
+  .idea p { margin: 0; color: var(--muted); font-size: 16px; }
+
+  /* Pipeline */
+  .pipeline {
+    display: flex; flex-wrap: wrap; gap: 8px; align-items: center;
+    margin: 28px 0 8px;
+    font-family: "Liberation Serif", Georgia, serif;
+    font-size: clamp(17px, 2.4vw, 22px);
+  }
+  .pipeline .step {
+    background: var(--panel);
+    border: 1px solid var(--rule);
+    padding: 8px 18px;
+  }
+  .pipeline .step.cloud { border-color: var(--brass); background: #fdf6e7; font-weight: bold; }
+  .pipeline .arrow { color: var(--brass); font-weight: bold; }
+  .cloudnote { font-size: 15px; color: var(--muted); margin: 6px 0 0; }
+
+  .shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 26px; margin-top: 34px; }
+  figure { margin: 0; }
+  figure img { border: 1px solid var(--rule); box-shadow: 0 2px 10px rgba(0,0,0,.08); }
+  figcaption { font-size: 14.5px; color: var(--muted); margin-top: 8px; }
+  .shot-wide { grid-column: 1 / -1; }
+
+  /* Dark sections */
+  .darksec { background: var(--dark-2); color: #e8e2d2; border-top: 1px solid #000; border-bottom: 1px solid #000; }
+  .darksec h2 { color: var(--brass-light); }
+  .darksec .lead { color: #bdb7a8; }
+  .leaves { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; margin: 30px 0 10px; }
+  .leaves .item {
+    border: 1px solid #333;
+    background: #101010;
+    padding: 18px 18px;
+  }
+  .leaves .item h3 { margin: 0 0 6px; font-size: 18px; color: var(--brass-light); }
+  .leaves .item p { margin: 0; font-size: 15px; color: #b5af9f; }
+  .hardware { margin-top: 26px; font-size: 16px; color: #cfc9ba; }
+
+  /* Two ways */
+  .ways { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 26px; margin-top: 30px; }
+  .way {
+    background: var(--panel);
+    border: 1px solid var(--rule);
+    padding: 28px 26px;
+  }
+  .way h3 { margin: 0 0 6px; font-size: 24px; }
+  .way .kicker { font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: var(--brass); margin: 0 0 14px; }
+  .way p { font-size: 16px; }
+  .way .disclaimer {
+    font-size: 14px;
+    color: var(--muted);
+    border-left: 3px solid var(--brass);
+    padding-left: 12px;
+    margin-top: 16px;
+  }
+  .btn {
+    display: inline-block;
+    background: var(--dark);
+    color: var(--brass-light);
+    padding: 11px 22px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 15px;
+    margin-top: 10px;
+  }
+  .btn:hover { background: #2a2a2a; }
+
+  /* About */
+  .about p { max-width: 780px; }
+
+  footer {
+    background: var(--dark);
+    color: #b5af9f;
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 15px;
+    border-top: 4px solid var(--brass);
+  }
+  footer .org { color: var(--brass-light); font-family: "Liberation Serif", Georgia, serif; font-size: 18px; margin-bottom: 8px; }
+  footer a { color: #d4b878; }
+  footer .pat { margin-top: 10px; letter-spacing: 2px; text-transform: uppercase; font-size: 12.5px; color: #8a8372; }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <h1>The Ledger System</h1>
+  <p class="tagline">Screenless AI for the Analog Classroom</p>
+  <p class="onesentence">Students write on paper. The box does the rest.</p>
+  <p class="badges"><span>Patent pending</span><span>·</span><span>Paragon, LLC</span></p>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>Three ideas</h2>
+    <div class="ideas">
+      <div class="idea">
+        <h3>No screens for students</h3>
+        <p>Students work the way they always have: pen or pencil, on paper, at a desk. The AI never meets the student, and the student never meets a screen. The technology stays on the teacher's side of the room.</p>
+      </div>
+      <div class="idea">
+        <h3>No answer key</h3>
+        <p>There is no answer key to build and no bubbles to fill. The system reads the blank master assignment and each student's written work, then evaluates the work itself — partial credit, written feedback, and a score, the way a teacher would.</p>
+      </div>
+      <div class="idea">
+        <h3>No names leave the box</h3>
+        <p>Students exist outside the building only as pseudonymous ID numbers. Names live in a local roster that never leaves the machine. What the AI sees is handwriting and a number — never who wrote it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <h2>How it works</h2>
+    <p class="lead">The teacher prints an assignment, students write on it, and the stack goes through an ordinary document scanner. From there the Ledger takes over.</p>
+    <div class="pipeline">
+      <span class="step">Print</span><span class="arrow">→</span>
+      <span class="step">Write</span><span class="arrow">→</span>
+      <span class="step">Scan</span><span class="arrow">→</span>
+      <span class="step">Crop</span><span class="arrow">→</span>
+      <span class="step cloud">Score</span><span class="arrow">→</span>
+      <span class="step">Report</span>
+    </div>
+    <p class="cloudnote">Only the <strong>Score</strong> step touches the cloud. Everything else happens on the machine in the room.</p>
+
+    <div class="shots">
+      <figure>
+        <img src="assets/teacher-desktop.png" alt="The Ledger appliance desktop: Start Ledger, Shut Down, Ledger Workspace, and Parking Lot — nothing else." width="1600" height="993" loading="lazy">
+        <figcaption>The appliance desktop. Four icons. A teacher's machine, not a programmer's.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/dashboard.png" alt="The Ledger dashboard: one green RUN button, a Max Score field, and a diagnostic log." width="1105" height="938" loading="lazy">
+        <figcaption>The dashboard. Load the master, load the scans, press RUN.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/sample-conspectus.png" alt="A conspectus page: the student's handwritten calculus answer restated, a partial-credit ruling, and written feedback." width="689" height="611" loading="lazy">
+        <figcaption>The conspectus — a per-student report: each answer, each ruling, written feedback, and the final score.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/finished-conspectus.png" alt="The evaluated-assignments folder: a Tabula score sheet CSV and a finished conspectus PDF." width="1257" height="755" loading="lazy">
+        <figcaption>What comes back: a score sheet for the gradebook and a printable conspectus for each student.</figcaption>
+      </figure>
+    </div>
+
+    <h2 style="margin-top:56px">The same pipeline, in a browser</h2>
+    <p class="lead">The browser version runs the identical evaluation pipeline entirely inside the teacher's browser — nothing to install, no student data on any server. It is available now to pilot districts.</p>
+    <div class="shots">
+      <figure class="shot-wide">
+        <img src="assets/browser-gui.png" alt="The Ledger running in a browser: a finished evaluation batch with the full diagnostic log and downloadable results." width="1600" height="768" loading="lazy">
+        <figcaption>A finished batch in the browser — same engine, same diagnostic log, same outputs.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/browser-conspectus.png" alt="A conspectus opened inside the browser version, showing a scored calculus response with feedback." width="1600" height="767" loading="lazy">
+        <figcaption>The conspectus, viewed and printed straight from the browser.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/browser-scanner.png" alt="The Scanner Calibration Studio in the browser: draggable crop zones for Title, ID, and Page Number over a scanned assignment." width="1600" height="766" loading="lazy">
+        <figcaption>The Calibration Studio — the teacher shows the system where the title, ID, and page number live on their own layout.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="darksec" id="privacy">
+  <div class="wrap">
+    <h2>What leaves the building</h2>
+    <p class="lead">The Ledger was built in a public-school classroom, under FERPA, by a teacher. The privacy boundary is not a policy — it is the architecture. Exactly four kinds of image ever go to the AI:</p>
+    <div class="leaves">
+      <div class="item"><h3>The blank master</h3><p>The unused assignment, exactly as printed. No student has touched it.</p></div>
+      <div class="item"><h3>The title crop</h3><p>A sliver of the page header naming the assignment.</p></div>
+      <div class="item"><h3>The ID crop</h3><p>The handwritten pseudonymous ID number. A number — not a name.</p></div>
+      <div class="item"><h3>The answer crops</h3><p>The answer boxes themselves, isolated from the rest of the page.</p></div>
+    </div>
+    <p class="hardware">Whole pages are sent only in essay mode — and even then under a pseudonymous ID, never a name. On the appliance, the machine itself is hardened: encrypted drive, FIDO hardware key to unlock, USB guard. If the box walks away, the data doesn't.</p>
+  </div>
+</section>
+
+<section id="get">
+  <div class="wrap">
+    <h2>Two ways to get it</h2>
+    <div class="ways">
+      <div class="way">
+        <p class="kicker">Open source · AGPL-3.0</p>
+        <h3>The Appliance</h3>
+        <p>The complete appliance software — the same code that has evaluated real classroom batches — is published under the AGPL-3.0 license, built for Debian 13, for district IT departments to examine and evaluate on their own hardware. The six classroom-verified evaluation prompts ship with it.</p>
+        <a class="btn" href="https://github.com/MOChemistry/ledger-grading-appliance">View the repository →</a>
+        <p class="disclaimer">The public release is experimental and is provided for IT professionals to evaluate. It is not for use with real student data as-is.</p>
+      </div>
+      <div class="way">
+        <p class="kicker">Pilot program</p>
+        <h3>The Browser Version</h3>
+        <p>The browser version brings the same pipeline to district-managed devices with nothing to install: the district's own AI key, evaluation running in the teacher's browser, and no student data on any server — including ours.</p>
+        <p><strong>Pilot program open — contact us.</strong></p>
+        <a class="btn" href="mailto:ledgermachine1@gmail.com">ledgermachine1@gmail.com</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <h2>About</h2>
+    <p>Jesse Barton has taught chemistry in Missouri public schools for 21 years, and chairs the science department at his school in Raytown. He is also a licensed electrician. The Ledger was built at home, on his own equipment and his own time, to solve his own problem: a stack of handwritten chemistry assignments and not enough hours to give each one the attention it deserved.</p>
+    <p>Before it was a product, it did the job. The Ledger evaluated an entire quarter of his chemistry classes' written work — real assignments, real handwriting, real feedback returned to real students. Two Missouri districts are now piloting it.</p>
+    <p>Paragon, LLC of Independence, Missouri was formed to carry that work forward.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="org">Paragon, LLC · Independence, Missouri</div>
+  <div>
+    Jesse Barton ·
+    <a href="mailto:ledgermachine1@gmail.com">ledgermachine1@gmail.com</a> ·
+    (816) 912-1881 ·
+    <a href="https://github.com/MOChemistry/ledger-grading-appliance">github.com/MOChemistry/ledger-grading-appliance</a>
+  </div>
+  <div class="pat">Patent pending</div>
+</footer>
+
+</body>
+</html>
