@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Student Handwriting and FERPA — Frequently Asked Questions</title>
+<meta name="description" content="Student Handwriting and FERPA — Frequently Asked Questions about The Ledger System. Compliance notes for Missouri school districts. Paragon, LLC, Independence, MO.">
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --paper: #faf8f4;
+    --panel: #ffffff;
+    --dark: #0d0d0d;
+    --dark-2: #161616;
+    --brass: #b08d44;
+    --brass-light: #d4b878;
+    --rule: #ddd6c8;
+    --muted: #5a564e;
+    --green: #1f7a4d;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Liberation Sans", "DejaVu Sans", Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+  }
+  h1, h2, h3 { font-family: "Liberation Serif", "DejaVu Serif", Georgia, "Times New Roman", serif; line-height: 1.2; }
+  a { color: #2a5d8f; }
+  .wrap { max-width: 1060px; margin: 0 auto; padding: 0 20px; }
+
+  /* Hero */
+  header.hero {
+    background: radial-gradient(ellipse at 50% 30%, var(--dark-2), var(--dark) 70%);
+    color: #f0ead8;
+    text-align: center;
+    padding: 72px 20px 64px;
+    border-bottom: 4px solid var(--brass);
+  }
+  .hero .home { display: inline-block; margin-bottom: 22px; font-size: 14px; letter-spacing: 1px; color: #bdb7a8; text-decoration: none; }
+  .hero .home:hover { color: var(--brass-light); }
+  .hero .badges { font-size: 14px; letter-spacing: 2px; text-transform: uppercase; color: var(--brass-light); margin: 0 0 14px; }
+  .hero h1 {
+    margin: 0 0 10px;
+    font-size: clamp(32px, 5.4vw, 52px);
+    letter-spacing: 1px;
+    color: var(--brass-light);
+  }
+  .hero .tagline {
+    font-family: "Liberation Serif", Georgia, serif;
+    font-style: italic;
+    font-size: clamp(19px, 3vw, 26px);
+    margin: 0 0 12px;
+    color: #e8e2d2;
+  }
+  .hero .sub { font-size: clamp(16px, 2.2vw, 19px); margin: 0; color: #cfc9ba; }
+
+  section { padding: 56px 0; }
+  section h2 {
+    font-size: clamp(26px, 4vw, 36px);
+    margin: 0 0 8px;
+    color: var(--ink);
+  }
+  section h2::after {
+    content: "";
+    display: block;
+    width: 64px;
+    height: 3px;
+    background: var(--brass);
+    margin-top: 10px;
+  }
+
+  /* Short answer */
+  .shortanswer {
+    background: var(--panel);
+    border: 1px solid var(--rule);
+    border-left: 4px solid var(--brass);
+    padding: 24px 26px;
+    max-width: 860px;
+    font-size: 18px;
+  }
+  .shortanswer .lbl,
+  .kicker { display: block; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: var(--brass); margin: 0 0 10px; }
+
+  .btn {
+    display: inline-block;
+    background: var(--dark);
+    color: var(--brass-light);
+    padding: 11px 22px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 15px;
+    margin-top: 22px;
+  }
+  .btn:hover { background: #2a2a2a; }
+
+  /* FAQ */
+  .faq { max-width: 860px; margin-top: 30px; }
+  .qa {
+    background: var(--panel);
+    border: 1px solid var(--rule);
+    border-top: 4px solid var(--brass);
+    padding: 24px 26px;
+    margin-bottom: 22px;
+  }
+  .qa h3 { margin: 0 0 12px; font-size: 22px; }
+  .qa p { margin: 0; color: var(--muted); font-size: 16.5px; }
+  .qa p + p { margin-top: 12px; }
+
+  /* What leaves the building (dark section) */
+  .darksec { background: var(--dark-2); color: #e8e2d2; border-top: 1px solid #000; border-bottom: 1px solid #000; }
+  .darksec h2 { color: var(--brass-light); }
+  .leaves { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; margin: 30px 0 10px; }
+  .leaves .item { border: 1px solid #333; background: #101010; padding: 18px 18px; }
+  .leaves .item h3 { margin: 0 0 6px; font-size: 18px; color: var(--brass-light); text-transform: uppercase; letter-spacing: 2px; }
+  .leaves .item p { margin: 0; font-size: 15px; color: #b5af9f; }
+
+  /* Sources */
+  .sources { border-top: 1px solid var(--rule); padding: 28px 0 40px; font-size: 14.5px; color: var(--muted); }
+  .sources b { color: var(--ink); }
+
+  footer {
+    background: var(--dark);
+    color: #b5af9f;
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 15px;
+    border-top: 4px solid var(--brass);
+  }
+  footer .org { color: var(--brass-light); font-family: "Liberation Serif", Georgia, serif; font-size: 18px; margin-bottom: 8px; }
+  footer a { color: #d4b878; }
+  footer .pat { margin-top: 10px; letter-spacing: 2px; text-transform: uppercase; font-size: 12.5px; color: #8a8372; }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <a class="home" href="index.html">← The Ledger System</a>
+  <p class="badges">The Ledger System &nbsp;·&nbsp; Frequently Asked Questions</p>
+  <h1>Student Handwriting and FERPA</h1>
+  <p class="tagline">Screenless AI for the Analog Classroom</p>
+  <p class="sub">Compliance notes for Missouri school districts<br>November 2026</p>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="shortanswer">
+      <span class="lbl">The Short Answer</span>
+      Handwriting is personally identifiable information under FERPA only when it is used as a <em>biometric</em> — a record built to recognize <em>who</em> wrote something. The Ledger reads <em>what</em> was written, never who wrote it. It is given no name, no student number, and no reference sample to compare against. Because no identification is possible, no identifier is created or disclosed.
+    </div>
+    <a class="btn" href="https://github.com/MOChemistry/ledger-grading-appliance/blob/main/docs/FERPA_FAQ.pdf">Download the one-page handout (PDF)</a>
+
+    <div class="faq">
+
+      <div class="qa">
+        <h3>Doesn't FERPA list handwriting as personally identifiable information?</h3>
+        <p>No. FERPA’s definition of PII (34 CFR § 99.3) includes a “biometric record,” defined as a record of measurable biological or behavioral characteristics <em>that can be used for automated recognition of an individual</em>. Handwriting appears as an example alongside fingerprints, retina and iris patterns, voiceprints, DNA, and facial characteristics. Every item on that list is PII because of its <em>use</em>: recognizing a person. A fingerprint on a cafeteria scanner is a biometric record; a fingerprint smudge on an assignment is not. A signature-verification template is a biometric record; a student’s pencilled “2 mol NaCl” is content.</p>
+        <p>The definition was added in the 2008 rulemaking (73 Fed. Reg. 74806), when districts were adopting fingerprint and palm scanners for lunch lines and library checkout. That is the problem it was written to address.</p>
+      </div>
+
+      <div class="qa">
+        <h3>But FERPA mentions “handwriting” elsewhere — doesn't that matter?</h3>
+        <p>That is a separate defined term doing a separate job. FERPA defines a <em>record</em> as information recorded in any way, “including, but not limited to, handwriting, print, computer media, video or audio tape…” That definition answers the question <em>what counts as a record</em> — the medium — and it is why a handwritten paper is an education record, exactly as every graded assignment has been since 1974. The question of <em>what identifies a student</em> is answered by the PII definition, where handwriting is covered only as a biometric built for recognition. The Ledger handles handwritten work the way schools always have: as the student’s work, scored and returned.</p>
+      </div>
+
+      <div class="qa">
+        <h3>Could the AI model identify a student from the handwriting anyway?</h3>
+        <p>Writer identification is a separate task that requires a labeled reference set — known samples with names attached. The Ledger supplies none. A model handed an anonymous crop with no reference can no more identify the writer than a stranger handed a torn-off answer box. A biometric record exists when a system is built to recognize a person. The Ledger is built to read an answer.</p>
+      </div>
+
+      <div class="qa">
+        <h3>What about FERPA's catch-all for “linkable” information?</h3>
+        <p>Paragraph (f) of the PII definition covers information that would allow a reasonable person <em>in the school community</em>, without personal knowledge of the circumstances, to identify the student with reasonable certainty. What leaves the district is a handwritten answer labeled with a teacher-assigned pseudonym — no name, no ID number, no roster, nothing that connects it to a person. The AI provider, which sits outside the school community altogether, receives a scoring task, not a student. The identity stays with the teacher, where it has always been.</p>
+      </div>
+
+      <div class="qa">
+        <h3>Who decides the data is de-identified?</h3>
+        <p>The district does. FERPA permits disclosure of de-identified information without consent after removal of all PII, provided the educational agency makes a reasonable determination that the student is not personally identifiable (34 CFR § 99.31(b)(1)). The Ledger is architected so that determination is straightforward to make and to document.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="darksec" id="leaves">
+  <div class="wrap">
+    <h2>What Leaves the Building</h2>
+    <div class="leaves">
+      <div class="item"><h3>Sent</h3><p>Answer-box crops — or, in essay mode, the written page — labeled only with a teacher-assigned pseudonym (e.g., “Bartonian ID”) · the blank master assignment</p></div>
+      <div class="item"><h3>Never</h3><p>Student names · district or state ID numbers · class rosters · any reference handwriting sample · gradebook or SIS data</p></div>
+      <div class="item"><h3>Stays</h3><p>The pseudonym-to-name key (with the teacher) · the scored conspectus report (on the district’s own hardware)</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="faq" style="margin-top:0">
+
+      <div class="qa">
+        <h3>Isn't the pseudonym just a student number?</h3>
+        <p>No. It is assigned by the teacher, is not derived from any real identifier, and the key linking it to a name never leaves the teacher. This is precisely the re-identification-code structure FERPA’s de-identification provisions contemplate. The Ledger does not connect to any student information system.</p>
+      </div>
+
+      <div class="qa">
+        <h3>What about the scored report that comes back?</h3>
+        <p>Once the teacher links it to a student, it is an education record — exactly as a red-penned paper is. FERPA governs the <em>disclosure</em> of education records. The report is stored on the district’s own hardware, under the district’s control, and is disclosed to no one.</p>
+      </div>
+
+      <div class="qa">
+        <h3>Do Missouri's student-data laws add requirements?</h3>
+        <p>RSMo § 161.096 governs DESE’s statewide longitudinal data system (MCDS): it restricts access to personnel who need it and requires vendor contracts to prohibit selling student data or using it for advertising. The Ledger meets those requirements by design: it does not connect to MCDS, sells no data, serves no advertising, and leaves every student record in the district’s hands.</p>
+      </div>
+
+      <div class="qa">
+        <h3>How do the strictest biometric laws treat handwriting?</h3>
+        <p>Illinois’s Biometric Information Privacy Act (740 ILCS 14/10) — the statute behind nearly every biometric class action in the country — defines a biometric identifier as a retina or iris scan, fingerprint, voiceprint, or scan of hand or face geometry, and <em>expressly excludes writing samples and written signatures</em>, along with any information derived from them. Texas’s CUBI statute (Bus. &amp; Com. Code § 503.001) uses the same list and omits handwriting entirely.</p>
+      </div>
+
+      <div class="qa">
+        <h3>What does the AI provider do with the cropped images?</h3>
+        <p>The district holds the API account, so the district chooses the provider and the terms that govern its data. Under Anthropic’s Commercial Terms, Anthropic may not train models on Customer Content, and its Data Processing Addendum applies; Google Cloud’s paid Vertex AI terms likewise provide that customer prompts and outputs are not used to train foundation models. The district is responsible for using a paid commercial tier — and, where the provider offers it, a zero-data-retention arrangement — rather than a free consumer key, whose terms differ. No data passes through Paragon, LLC.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="sources"><b>Sources:</b> 34 CFR § 99.3 (definitions of “personally identifiable information,” “biometric record,” “record”) · 34 CFR § 99.31(b)(1) · 73 Fed. Reg. 74806 (Dec. 9, 2008) · 740 ILCS 14/10 · Tex. Bus. &amp; Com. Code § 503.001 · RSMo § 161.096 · Anthropic Commercial Terms of Service and DPA · Google Cloud Generative AI terms.</div>
+</div>
+
+<footer>
+  <div class="org">Paragon, LLC · Independence, Missouri</div>
+  <div>
+    Jesse Barton ·
+    <a href="mailto:ledgermachine1@gmail.com">ledgermachine1@gmail.com</a> ·
+    (816) 912-1881 ·
+    <a href="https://github.com/MOChemistry/ledger-grading-appliance">github.com/MOChemistry/ledger-grading-appliance</a> ·
+    <a href="ferpa.html">FERPA FAQ</a>
+  </div>
+  <div class="pat">Patent pending</div>
+</footer>
+
+</body>
+</html>
